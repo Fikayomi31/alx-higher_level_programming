@@ -10,4 +10,9 @@ Write a function that adds 2 tuples and Returns a tuple with 2 integers.
 write a function that returns a tuple with the length of a string and its first character.
 Write a function that finds the biggest integer of a list.
 Write a function that finds all multiples of 2 in a list.
+write a function that deletes the item at a specific position in a list.
+Complete the source code in order to switch value of a and b
 
+You can find the source code here
+Your code should be inserted where the comment is (line 4)
+Your program should be exactly 5 lines long
