@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
     a, opr, b = args
     if opr not in ('+', '-', '*', '/'):
-        print("Unknown operator. Available operator: +, -, *,/")
+        print("Unknown operator. Available operator: +, -, * and /")
         sys.exit(1)
     a = int(a)
     b = int(b)
@@ -22,5 +22,5 @@ if __name__ == '__main__':
         print("{} {} {} = {}".format(a, opr, b, sub(a, b)))
     elif opr == '*':
         print("{} {} {} = {}".format(a, opr, b, mul(a, b)))
-    else:
+    elif opr == '/':
         print("{} {} {} = {}".format(a, opr, b, div(a, b)))
