@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-last_division = __import__('4-last_division').last_division
+list_division = __import__('4-list_division').list_division
 
 my_l_1 = [10, 8, 4]
 my_l_2 = [2, 4, 4]
