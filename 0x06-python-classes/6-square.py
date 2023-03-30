@@ -6,7 +6,7 @@
 class Square:
     """Representing a class square"""
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializing a new square
         Args:
             size: size of the square
@@ -56,6 +56,6 @@ class Square:
             return
         [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
-                [print(" ", end="") for j in range(0, self.__position[0])]
-                [print("#", end="") for k in range(0, self.__size)]
-                print()
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            print()
