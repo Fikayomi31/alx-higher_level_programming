@@ -8,18 +8,18 @@ Checking the normal output
 >>> first_name = "John"
 >>> last_name = 'Smith'
 >>> say_my_name(first_name, last_name)
-John Smith
+My name is John Smith
 
 checking one input of name
->>> say_my_name("Bob")
-Bob
+>>> say_my_name("Job")
+My name is Job 
 
 checking for TypeError
 >>> say_my_name(234, "Bob")
-Traceback (most recent call last)
+Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name("John", 345)
-Traceback (most recent call last)
+>>> say_my_name('Bob', 345)
+Traceback (most recent call last):
 TypeError: last_name must be a string
 
