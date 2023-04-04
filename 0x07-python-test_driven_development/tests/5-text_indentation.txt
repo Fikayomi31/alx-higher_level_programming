@@ -1,0 +1,13 @@
+The function for text indentation module
+========================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> text = "Write a function that prints: a text with 2 new lines after each of these char?"
+>>> text_indentation(text)
+Write a function that prints:
+a text with 2 new lines after each of these char?
+<BLANKLINE>
+
+>>> 
