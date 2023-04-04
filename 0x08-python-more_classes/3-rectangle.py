@@ -67,4 +67,7 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
+        """newline + the str which is e.g # * 2(width)
+        which is ## and the ## * height given
+        """
         return "\n".join(["#" * self.width] * self.height)
