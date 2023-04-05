@@ -72,5 +72,6 @@ class Rectangle:
                                               str(self.__height))
 
     def __del__(self):
+        """print a del message for the class deleted"""
         print("Bye Rectangle...")
         Rectangle.number_of_instance -= 1
