@@ -63,7 +63,7 @@ class Rectangle:
     def __str__(self):
         """print the representation of the class rectangle"""
         if self.__width or self.__height == 0:
-            return ""
+            return ("")
         return "\n".join(["#" * self.__width] * self.__height)
 
     def _repr__(self):
