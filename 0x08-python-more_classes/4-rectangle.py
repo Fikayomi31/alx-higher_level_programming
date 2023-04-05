@@ -74,4 +74,9 @@ class Rectangle:
         """
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
+        
+        """in another format below
+        return "Rectangle ({:s}, {:s})".format(str(self.__width), 
+                    str(self.__height))
+        """
         return rect
