@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""This module define a text read function"""
+"""Defining module that read file in a function"""
 
 
-def read_line(filename=""):
-    """printing the content of the file"""
-    with openi(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+def read_file(filename=""):
+    """print the content of the file"""
+    with open(filename, 'r', encoding="utf-8") as f:
+        print(f.read())
