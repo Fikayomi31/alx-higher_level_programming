@@ -4,5 +4,8 @@ import json
 
 
 def to_json_string(my_obj):
-    """print json of my_obj"""
+    """return json of my_obj
+    Arg:
+        my_obj: an object to return
+    """
     return json.dumps(my_obj)
