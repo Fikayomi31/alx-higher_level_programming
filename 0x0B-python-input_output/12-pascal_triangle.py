@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module define a pascal triangle"""
 
+
 def pascal_triangle(n):
     """function to a list of integer
     representing pascal triangle
@@ -10,7 +11,7 @@ def pascal_triangle(n):
             a list of lists of integer
     """
     if n <= 0:
-        return ""
+        return []
     for i in range(n):
-        print(" "*(n - 1), end='')
+        
         print(' '.join(map(str, str(11 ** i))))
