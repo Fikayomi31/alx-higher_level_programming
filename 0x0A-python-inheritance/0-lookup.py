@@ -3,9 +3,10 @@
 of an object
 """
 
+
 def lookup(obj):
     """dir to list attribute and method
     Args:
         obj: the object
     """
-    print(dir(obj))
+    return (dir(obj))
