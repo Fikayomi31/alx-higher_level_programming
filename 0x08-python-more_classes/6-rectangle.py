@@ -83,4 +83,4 @@ class Rectangle:
         """print a del message for the class deleted"""
         Rectangle.number_of_instances -= 1
 
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
