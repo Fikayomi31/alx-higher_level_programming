@@ -18,9 +18,43 @@ class test_rectanglr(unittest.TestCase):
 
     def test_width(self):
         self.assertEqual(5, self.rec.width)
+        
+        """testing for varoius TypeError"""
+        with self.assertRaises(TypeError):
+            rect = Rectangle(True, 5)
+            rect = Rectangle("1", 5)
+            rect = Rectangle([10, 6], 5)
+            rect = Rectangle(5, [10, 6])
+            rect = Rectangle("string", 5)
+            rect = Rectangle(1.34, 5)
+            rect = Rectangle(5, 1.34)
+
+        """testing for various ValueError"""
+        with self.assertRaises(ValueError):
+            rect = Rectangle(0, 5)
+            rect = Rectangle(-4, 5)
+            rect = Rectangle(5, -4)
+            rect = Rectangle(-2, 3, 4, 5, 6)
 
     def test_height(self):
         self.assertEqual(10, self.rec.height)
+
+        """testing for varoius TypeError"""
+        with self.assertRaises(TypeError):
+            rect = Rectangle(True, 5)
+            rect = Rectangle("1", 5)
+            rect = Rectangle([10, 6], 5)
+            rect = Rectangle(5, [10, 6])
+            rect = Rectangle("string", 5)
+            rect = Rectangle(1.34, 5)
+            rect = Rectangle(5, 1.34)
+
+        """testing for various ValueError"""
+        with self.assertRaises(ValueError):
+            rect = Rectangle(0, 5)
+            rect = Rectangle(-4, 5)
+            rect = Rectangle(5, -4)
+            rect = Rectangle(-2, 3, 4, 5, 6)
 
     def test_x(self):
         """testing for x"""
@@ -28,11 +62,33 @@ class test_rectanglr(unittest.TestCase):
         self.assertEqual(54, self.rec.x)
         self.assertEqual(0, self.rec.y)
 
+        """testing for various TypeError"""
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, 5, 'str', 4, 3)
+            rect = Rectangle(1, 5, [2, 3], 4, 3)
+            rect = Rectangle(1, 5, True)
+
+        """testing for various ValueError"""
+        with self.assertRaises(ValueError):
+            rect = Rectangle(1, 5, -3)
+            rect = Rectangle(1, 5, 1.07)
+
     def test_y(self):
         """testing for y"""
         self.rec.y = 45
         self.assertEqual(45, self.rec.y)
         self.assertEqual(0, self.rec.x)
+        
+        """testing for various TypeError"""
+        with self.assertRaises(TypeError):
+            rect = Rectangle(2, 4, 4, 'str', 3)
+            rect = Rectangle(2, 4, 4, [2, 4], 3)
+            rect = Rectangle(2, 4, 4, True)
+
+        """testing for various ValueError"""
+        with self.assertRaises(ValueError):
+            rect = Rectangle(2, 4, 4, -3, 3)
+            rect = Rectangle(2, 4, 4, 1.07)
 
     def test_area(self):
         """testing for area"""
