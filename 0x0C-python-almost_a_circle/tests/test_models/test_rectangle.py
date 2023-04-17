@@ -98,12 +98,15 @@ class test_rectanglr(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect = Rectangle(1, 5, [2, 3], 4, 3)
 
+        with self.assertRaises(TypeError):
+            rect = Rectangle(1, 5, 2.3, 4, 5)
+
         """testing for various ValueError"""
         with self.assertRaises(ValueError):
             rect = Rectangle(1, 5, -3)
 
         with self.assertRaises(ValueError):
-            rect = Rectangle(1, 5, 1.07)
+            rect = Rectangle(1, 5, -4, -3, 4)
 
     def test_y(self):
         """testing for y"""
@@ -118,18 +121,25 @@ class test_rectanglr(unittest.TestCase):
         with self.assertRaises(TypeError):
             rect = Rectangle(2, 4, 4, [2, 4], 3)
 
+        with self.assertRaises(TypeError):
+            rect = Rectangle(2, 4, 4, 1.23, 3)
+
         """testing for various ValueError"""
         with self.assertRaises(ValueError):
             rect = Rectangle(2, 4, 4, -3, 3)
 
         with self.assertRaises(ValueError):
-            rect = Rectangle(2, 4, 4, 1.07)
+            rect = Rectangle(2, 4, -4, -2, 4)
 
     def test_area(self):
         """testing for area"""
         self.assertEqual(self.rec.area(), 5 * 10)
         rect = Rectangle(3, 2, 4, 4, 2)
         self.assertEqual(rect.area(), 3 * 2)
+
+    def test_display(self):
+
+
 
 if __name__ == "__main__":
     unittest.main()
