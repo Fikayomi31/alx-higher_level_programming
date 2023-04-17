@@ -21,19 +21,32 @@ class test_rectanglr(unittest.TestCase):
         
         """testing for varoius TypeError"""
         with self.assertRaises(TypeError):
-            rect = Rectangle(True, 5)
             rect = Rectangle("1", 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle([10, 6], 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(5, [10, 6])
+
+        with self.assertRaises(TypeError):
             rect = Rectangle("string", 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(1.34, 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(5, 1.34)
 
         """testing for various ValueError"""
         with self.assertRaises(ValueError):
             rect = Rectangle(0, 5)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(-4, 5)
             rect = Rectangle(5, -4)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(-2, 3, 4, 5, 6)
 
     def test_height(self):
@@ -41,19 +54,35 @@ class test_rectanglr(unittest.TestCase):
 
         """testing for varoius TypeError"""
         with self.assertRaises(TypeError):
-            rect = Rectangle(True, 5)
             rect = Rectangle("1", 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle([10, 6], 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(5, [10, 6])
+
+        with self.assertRaises(TypeError):
             rect = Rectangle("string", 5)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(1.34, 5)
+
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(5, 1.34)
 
         """testing for various ValueError"""
         with self.assertRaises(ValueError):
             rect = Rectangle(0, 5)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(-4, 5)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(5, -4)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(-2, 3, 4, 5, 6)
 
     def test_x(self):
@@ -65,12 +94,15 @@ class test_rectanglr(unittest.TestCase):
         """testing for various TypeError"""
         with self.assertRaises(TypeError):
             rect = Rectangle(1, 5, 'str', 4, 3)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(1, 5, [2, 3], 4, 3)
-            rect = Rectangle(1, 5, True)
 
         """testing for various ValueError"""
         with self.assertRaises(ValueError):
             rect = Rectangle(1, 5, -3)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(1, 5, 1.07)
 
     def test_y(self):
@@ -82,12 +114,15 @@ class test_rectanglr(unittest.TestCase):
         """testing for various TypeError"""
         with self.assertRaises(TypeError):
             rect = Rectangle(2, 4, 4, 'str', 3)
+
+        with self.assertRaises(TypeError):
             rect = Rectangle(2, 4, 4, [2, 4], 3)
-            rect = Rectangle(2, 4, 4, True)
 
         """testing for various ValueError"""
         with self.assertRaises(ValueError):
             rect = Rectangle(2, 4, 4, -3, 3)
+
+        with self.assertRaises(ValueError):
             rect = Rectangle(2, 4, 4, 1.07)
 
     def test_area(self):
