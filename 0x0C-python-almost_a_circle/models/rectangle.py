@@ -14,7 +14,8 @@ class Rectangle(Base):
             height: height of the rectangle
             x: the x cordinator the rectangle
             y: the y cordinator of the rectangle
-            id: the id of the rectangle
+            id: the id of the rectangle which is an
+                instance of class Base
         """
         self.width = width
         self.height = height

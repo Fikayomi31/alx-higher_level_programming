@@ -34,11 +34,11 @@ class test_rectanglr(unittest.TestCase):
         self.assertEqual(45, self.rec.y)
         self.assertEqual(0, self.rec.x)
 
-    def test_rectangle_id(self):
-        """testing for the id of rectangle"""
-        rect = (1, 33, 0, 0, 199)
-        self.assertEqual(199, rect.id)
-
+    def test_area(self):
+        """testing for area"""
+        self.assertEqual(self.rec.area(), 5 * 10)
+        rect = Rectangle(3, 2, 4, 4, 2)
+        self.assertEqual(rect.area(), 3 * 2)
 
 if __name__ == "__main__":
     unittest.main()
