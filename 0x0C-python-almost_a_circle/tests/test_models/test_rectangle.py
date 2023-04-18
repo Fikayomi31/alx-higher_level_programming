@@ -1,5 +1,10 @@
-#!/u/sr/bin/python3
+#!/u/sr/bin/pythion3
 import unittest
+import io
+import os
+import sys
+from contextlib import redirect_stdout
+from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -137,9 +142,18 @@ class test_rectanglr(unittest.TestCase):
         rect = Rectangle(3, 2, 4, 4, 2)
         self.assertEqual(rect.area(), 3 * 2)
 
+    def test_str(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual("[Rectangle] (5) 3/4 - 1/2", str(rect))
+        rect = Rectangle(5, 5, 1)
+        self.assertEqual("[Rectangle] (5) 1/0 - 5/5", str(rect))
+
     def test_display(self):
-
-
-
-if __name__ == "__main__":
+        rect = Rectangle(1, 2, 3, 4, 5)
+        with io.StringIO() as bufferIO, redirect_stdout(bufferIO):
+            rect.display()
+            output = bufferIO.getvalue()
+            self.assertEqual(output,
+                             ('\n' * 5 +(' ' * 4 + '#' * 2 + '\n') *3))
+if __name__ == "main__":
     unittest.main()
