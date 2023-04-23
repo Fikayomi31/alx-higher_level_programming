@@ -2,6 +2,7 @@
 """Defining a class base"""
 
 import json
+import csv
 
 
 class Base:
@@ -22,3 +23,14 @@ class Base:
         if not list_dictionaries or list_dictionaries == []:
             return json.dumps([])
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """json string representationbof list_objs to a file"""
+        filename = cls.__name__ + ".json"
+        with open(filename, 'w') as jsonfile:
+            if list_objs is None:
+                jsonfile.write("[]")
+            else:
+                list_dicts = [j.to_dictionary() for j in list_objs]
+                jsonfile.write(Base.to_json_string(list_dicts))
