@@ -2,7 +2,7 @@
 """Defining a class base"""
 
 import json
-
+import cls
 
 
 class Base:
