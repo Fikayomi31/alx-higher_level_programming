@@ -22,8 +22,7 @@ class Base:
         """return json string representation of list_dictionary"""
         if not list_dictionaries or list_dictionaries == []:
             return "[]"
-        if (type(list_dictionaries) != list or not
-                all(type(i) == dict for i in list_dictionaries)):
+        if not isinstance(list_dictionaries, list):
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
