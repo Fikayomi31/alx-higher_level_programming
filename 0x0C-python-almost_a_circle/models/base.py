@@ -3,7 +3,7 @@
 
 import json
 import csv
-
+import os
 
 class Base:
     """Representing the class base"""
@@ -21,7 +21,10 @@ class Base:
     def to_json_string(list_dictionaries):
         """return json string representation of list_dictionary"""
         if not list_dictionaries or list_dictionaries == []:
-            return json.dumps([])
+            return "[]"
+        if (type(list_dictionaries) != list or not
+                all(type(i) == dict for i in list_dictionaries)):
+            raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
     @classmethod
