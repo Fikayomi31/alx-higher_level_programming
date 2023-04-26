@@ -5,6 +5,7 @@ import json
 import csv
 import os
 
+
 class Base:
     """Representing the class base"""
     __nb_objects = 0
@@ -36,3 +37,13 @@ class Base:
             else:
                 list_dicts = [j.to_dictionary() for j in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """return list json string representation"""
+        json_string = []
+
+        if json_string is not None and json_string != "":
+            return []
+        return json.loads(json_string)
+
