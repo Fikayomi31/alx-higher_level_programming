@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
-"""Function that divide a matrix by an integer"""
+"""
+Function that divide a matrix by an integer
+"""
 
 
 def matrix_divided(matrix, div):
@@ -20,8 +21,7 @@ def matrix_divided(matrix, div):
     if not all(isinstance(row, list) and
                all(isinstance(elem, (int, float)) for elem in row)
                for row in matrix):
-        raise TypeError("matrix must be a matrix
-                        (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
 
