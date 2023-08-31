@@ -22,7 +22,7 @@ class Square:
             value: value for the size
         Raise:
             TypeError: if size not an integer
-            ValueError: if size is < 
+            ValueError: if size is < 0
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -62,7 +62,8 @@ class Square:
             for i in range(self.__position[1]):
                 my_square = "\n"
             for i in range(self.__size):
-                my_square += " " * self.__position[0] + "#" * self.__size + "\n"
+                my_square += " " * self.__position[0] +
+                "#" * self.__size + "\n"
             return my_square
 
     def __str__(self):
