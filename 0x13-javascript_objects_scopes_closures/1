@@ -1,0 +1,12 @@
+#!/usr/bin/node
+
+const Rectangle = require('./4-rectangle');
+
+class Square extends Rectangle {
+	constructor(width, height, size) {
+		super(width, height);
+		this.size = size;
+	}
+}
+const r1 = new Square(4);
+r1.print()
