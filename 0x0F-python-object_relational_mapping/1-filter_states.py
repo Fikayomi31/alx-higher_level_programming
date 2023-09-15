@@ -3,6 +3,7 @@
 Script that list all states with a name starting with
 N from the daatabase
 """
+
 import MySQLdb
 import sys
 
