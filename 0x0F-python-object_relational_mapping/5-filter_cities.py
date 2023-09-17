@@ -16,10 +16,10 @@ if __name__ == "__main__":
                          database=database, port=3306)
 
     cursor = db.cursor()
-    cursor.execute("SELECT name FROM cities\
-                    WHERE cities.state.id = (SELECT id FROM states\
-                    WHERE name LIKE BINARY %(state_name)s)\
-                    ORDER BY cities,id ASC", {'name': state})
+    cursor.execute("SELECT cities.name FROM cities\
+                    INNER JOIN states ON cities.state_id = states.id\
+                    WHERE states.name LIKE BINARY %(name)s\
+                    ORDER BY cities.id ASC", {'name': state})
     results = cursor.fetchall()
     cursor.close()
     db.close()

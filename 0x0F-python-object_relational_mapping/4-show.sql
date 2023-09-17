@@ -1,0 +1,1 @@
+sELECT * FROM cities;
