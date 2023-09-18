@@ -1,1 +1,0 @@
-sELECT * FROM cities;
