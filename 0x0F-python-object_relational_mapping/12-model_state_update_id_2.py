@@ -14,4 +14,3 @@ if __name__ == '__main__':
     state = session.query(State).get(2)
     state.name = "New Mexico"
     session.commit()
-
