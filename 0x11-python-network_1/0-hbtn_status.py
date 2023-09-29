@@ -6,14 +6,14 @@ if __name__ == "__main__":
 
     url = 'https://alx-intranet.hbtn.io/status'
 
-    """HTTP GET request to the url"""
+    """HTTP to GET request to the url and urlopen to open it"""
     response = urllib.request.Request(url)
     with urllib.request.urlopen(response) as respons:
 
-        """read the content as bytes"""
+        """reading the content of the url http as bytes"""
         content = respons.read()
 
-        """Decode the content to utf8"""
+        """Decode the content of the url http to utf8"""
         content_utf8 = content.decode('utf-8')
 
         print("Body response:")
