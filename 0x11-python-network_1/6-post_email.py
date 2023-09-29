@@ -12,5 +12,5 @@ if __name__ == "__main__":
     data = {'email': sys.argv[2]}
 
     r = requests.post(url, data)
-    response = r.read().decode('utf-8')
+    response = r.text
     print(response)
