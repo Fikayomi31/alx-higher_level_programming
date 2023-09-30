@@ -9,10 +9,13 @@ import requests
 
 
 if __name__ == "__main__":
-    letter = "" if len(sys.argv) == 1 else sys.argv[1]
-    payload = {"q": letter}
+    if len(sys.argv) > 1:
+        payload = {'q': sys.argv[1]}
+    else:
+        payload = {'q': ""}
+    url = "http://0.0.0.0:5000/search_user"
 
-    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    r = requests.post(url, data=payload)
     try:
         response = r.json()
         if response == {}:
